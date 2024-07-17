@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>fibonacci</title>
+</head>
+<body>
+    <div class="container">
+        <input id="num" type="number">
+        <textarea id="text" name="story" rows="10" cols="66" placeholder="Your answer goes here..."></textarea>
+        <br>
+        <button onclick="fibonacci()">Result</button>
+    </div>
+    <script>
+        function fibonacci() {
+            let f1 = 0;
+let f2 = 1;
+let n = document.getElementById('num').value
+let textarea = document.getElementById('text')
+
+let result = [f1, f2]
+for (i = 0; i < n; i++){
+    let next = f1 +f2;
+    f1 = f2;
+    f2 = next;
+    result.push(f2)
+}
+
+textarea.value = (result.join( ))
+//console.log(result.join( ))
+        }
+    </script>
+</body>
+</html>
